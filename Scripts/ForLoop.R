@@ -6,7 +6,7 @@ x1 = LevPointCentre(x)
 y1 = Link(x1)
 
 for(i in 0:99) {
-  CreatePDF(x, y, x1, y1, i, 100, "Central")
+  CreatePDF(x, y, x1, y1, i, 100, "Central", robust=FALSE)
 }
 
 ## Gráficos de apalancamento no extremo
@@ -14,5 +14,13 @@ x1 = LevPointExtreme(x)
 y1 = Link(x1)
 
 for(i in 0:99) {
-  CreatePDF(x, y, x1, y1, i, 100, "Extremo")
+  CreatePDF(x, y, x1, y1, i, 100, "Extremo", robust=FALSE)
+}
+
+## Gráficos de apalancamento no extremo (regresión robusta)
+x1 = LevPointExtreme(x)
+y1 = Link(x1)
+
+for(i in 0:99) {
+  CreatePDF(x, y, x1, y1, i, 100, "ExtremoR", robust=TRUE)
 }
