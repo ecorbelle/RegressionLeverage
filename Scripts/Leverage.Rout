@@ -1,0 +1,42 @@
+
+R version 3.2.1 (2015-06-18) -- "World-Famous Astronaut"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: i486-pc-linux-gnu (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> ## Script para definir as funcións que xeneran os puntos de apalancamento
+> ## Eduardo Corbelle, 26 de setembro de 2015
+> 
+> # Función 1: punto de apalancamento no centro do rango de x
+> LevPointCentre <- function(x) {
++   x1 = mean(range(x))
++   return(x1)
++ }
+> 
+> # Función 2: punto de apalancamento no extremo do rango de x
+> LevPointExtreme <- function(x) {
++   # Detectamos o máximo de x
++   x1 = max(x)
++   # Detectamos o segundo por arriba
++   x2 = max(x[-which(x==max(x))])
++   # Creamos o seguinte punto
++   x3 = x1 + (x1-x2)
++   return(x3)
++ }
+> 
+> proc.time()
+   user  system elapsed 
+  0.556   0.012   0.723 

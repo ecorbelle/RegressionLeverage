@@ -1,6 +1,9 @@
 ## Script para xenerar os datos iniciais
 ## Eduardo Corbelle, 26 de setembro de 2015
 
+# Tamaño de mostra:
+N = 20
+
 # Creamos unha variable x, extraída dunha normal
 x <- rnorm(N)
 

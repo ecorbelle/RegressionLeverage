@@ -1,0 +1,49 @@
+
+R version 3.2.1 (2015-06-18) -- "World-Famous Astronaut"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: i486-pc-linux-gnu (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> ## Script para xenerar finalmente os gráficos mediante un bucle
+> ## Eduardo Corbelle, 26 de setembro de 2015
+> 
+> ## Gráficos de apalancamento central
+> x1 = LevPointCentre(x)
+> y1 = Link(x1)
+> 
+> for(i in 0:99) {
++   CreatePDF(x, y, x1, y1, i, 100, "Central", robust=FALSE)
++ }
+> 
+> ## Gráficos de apalancamento no extremo
+> x1 = LevPointExtreme(x)
+> y1 = Link(x1)
+> 
+> for(i in 0:99) {
++   CreatePDF(x, y, x1, y1, i, 100, "Extremo", robust=FALSE)
++ }
+> 
+> ## Gráficos de apalancamento no extremo (regresión robusta)
+> x1 = LevPointExtreme(x)
+> y1 = Link(x1)
+> 
+> for(i in 0:99) {
++   CreatePDF(x, y, x1, y1, i, 100, "ExtremoR", robust=TRUE)
++ }
+> 
+> proc.time()
+   user  system elapsed 
+  3.868   0.152   4.430 

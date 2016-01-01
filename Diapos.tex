@@ -1,6 +1,6 @@
 \documentclass[ignorenonframetext, noae]{beamer}
 
-%\usepackage{helvet} % avant
+\usepackage{helvet} % avant
 \usepackage[english,spanish,galician]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8x]{inputenc}
@@ -11,21 +11,24 @@
 \usepackage{booktabs}
 \usepackage{animate}
 
+
 \graphicspath{{"./Figures/"}}
+\setbeamertemplate{navigation symbols}{}
+\usecolortheme{seagull}
 
 \begin{document}
 %----------- diapositiva ---------------------------------------------------%
-\begin{frame}{}
+\begin{frame}{Efecto de apalancamento dun punto central}
  \animategraphics[autoplay,loop,poster=first,width=\textwidth]{8}{Central}{000}{099}
 \end{frame}
 
 %----------- diapositiva ---------------------------------------------------%
-\begin{frame}{}
+\begin{frame}{Efecto de apalancamento dun punto extremo}
  \animategraphics[autoplay,loop,poster=first,width=\textwidth]{8}{/Extremo}{000}{099}
 \end{frame}
 
 %----------- diapositiva ---------------------------------------------------%
-\begin{frame}{}
+\begin{frame}{Efecto de apalancamento dun punto extremo}
  \animategraphics[autoplay,loop,poster=first,width=\textwidth]{8}{/ExtremoR}{000}{099}
 \end{frame}
 
