@@ -1,6 +1,6 @@
 # Animated leverage
 
-## Animación do efecto de apalancamento sobre unha regresión lineal
+## Animación do apalancamento sobre unha regresión lineal
 
 Eduardo Corbelle Rico, setembro de 2015
 
